@@ -23,6 +23,11 @@ export class AuthService {
 
   }
 
+  getByIdUser(id:number):Observable<User>{
+    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+
+  }
+
   logado(){
     let ok : boolean = false
 
